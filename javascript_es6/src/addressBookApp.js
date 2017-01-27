@@ -1,13 +1,8 @@
+import BEServices from './beServices';
+import AddressBookItem from './addressBookItem';
 
 function AddressBookApp(){
-  /*
-    var input = {
-      name: "pippo",
-      email: "arb@gmail.com",
-      github: "pippopippo",
-      phone: "02565958"
-    };
-  */
+
   var beServices = new BEServices();
 
   // questa funzione dato un input crea
@@ -32,4 +27,10 @@ function AddressBookApp(){
     var addresses = beServices.findAll();
     return addresses;
   }
+
+  this.test = () => {
+    console.log('questo è un log ^_^');
+  }
 }
+
+export default AddressBookApp;

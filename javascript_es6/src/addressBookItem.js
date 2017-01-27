@@ -5,3 +5,5 @@ function AddressBookItem(input){
   this.phone = input.phone;
   this.uid = Date.now() + "-" + Math.random();
 }
+
+export default AddressBookItem;

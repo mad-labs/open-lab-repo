@@ -1,3 +1,5 @@
+import AddressBookApp from '../src/addressBookApp';
+
 describe('Application Tests: ', function(){
 
   var addressBookApp,

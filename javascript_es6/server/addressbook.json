@@ -1,0 +1,30 @@
+[
+    {
+        "id": "0",
+        "name": "Gabriele Manfredi",
+        "email": "gabriele.manfredi.999@gmail.com",
+        "github": "Gabrox999",
+        "phone": "+393920440097"
+    },
+    {
+        "id": "1",
+        "name": "Giulia Di Nunno",
+        "email": "giulia.dinunno@objectmethod.it",
+        "github": "",
+        "phone": ""
+    },
+    {
+        "id": "3",
+        "name": "Davide Carpini",
+        "email": "carpini.davide@gmail.com",
+        "github": "davidecarpini",
+        "phone": "+393462435105"
+    },
+    {
+        "id": "4",
+        "name": "Simone Celia",
+        "email": "s.celia87@gmail.com",
+        "github": "simon387",
+        "phone": "+393403909232"
+    }
+]
