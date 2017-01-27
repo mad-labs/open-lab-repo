@@ -13,7 +13,9 @@ function AddressBookApp(){
   // questa funzione dato un input crea
   // un nuovo oggetto di tipo AddressBookItem
   this.createNewAddressBookItem = function (input){
+    console.log("createNewAddressBookItem(..): [" + input + "]");
     var abi = new AddressBookItem(input);
+    console.log("new AddressBookItem): [" + abi + "]");
     return abi;
   }
 

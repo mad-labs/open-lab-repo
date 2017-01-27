@@ -1,3 +1,16 @@
+# Open Lab - 03
+
+## Durante questa sessione abbiamo:
+
+Durante la scorsa sessione abbiamo:
+
+* iniziato a scalfire il paradigma di programmazione funzionale
+* continuato con il progettino di TEST
+
+Su github troverete il codice sviluppato nel repository https://github.com/Mad-Labs/open-lab/tree/03_intro_to_funcional_paradingm
+
+
+
 # Open Lab - 02
 
 ## Durante questa sessione abbiamo:

@@ -3,14 +3,12 @@ function BEServices(){
   var addresses = [];
 
   this.save = function (addressBookItem){
-    console.log("addresses=" + addresses);
+    console.log("INITIAL addresses.length: " + addresses.length);
 
     console.log("typeof addressBookItem=" + typeof addressBookItem);
     if (addressBookItem instanceof AddressBookItem) {
       addresses.push(addressBookItem);
-
-      console.log("addresses=" + addresses);
-
+      console.log("CURRENT addresses.length: " + addresses.length);
       return "OK";
     }
     return "KO";
