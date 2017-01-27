@@ -1,6 +1,27 @@
+# Open Lab - 02
+
+## Durante questa sessione abbiamo:
+
+* ripassato Javascript
+* ripassato TDD e JASMINE
+* Iniziato progettino di TEST: un'applicazione per gestire gli iscritto a OpenLab e inviare loro mail massivamente
+  * sviluppato prime funzionalità con TDD
+    * creazione oggetto contenente informazioni utenti
+    * salvataggio a BE (fake) delle info utente
+    * recupero lista di utenti da BE (fake)
+
+Su github troverete il codice sviluppato nel repository https://github.com/Mad-Labs/open-lab/tree/02_dive_into_tdd
+
+Ecco alcuni link utili per approfondire e/o rimettersi in pari:
+
+* JS: approfondimenti su Javascript
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+
+
+
 # Open Lab - 01
 
-## Durante la prima session abbiamo:
+## Durante questa sessione abbiamo:
 * introdotto il progetto OpenLab https://mad-labs.github.io/open-lab/
 * introdotto Javascript parlando di
   * tipi

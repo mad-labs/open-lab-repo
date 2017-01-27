@@ -3,54 +3,68 @@
   <head>
     <meta charset="UTF-8">
     <title>Title of the document</title>
-
     <script type="text/javascript">
-    var MyTeam = MyTeam || {};
 
-
-    MyTeam.anangrafica = (function(){
-      var saluto = "Ciao";
-      var vaffanculo = function(){
-        console.log("fanculo");
-
+      function s(stringa){
+        console.log(stringa);
       }
-      var setSaluto = function(nuovoSaluto){
-        saluto = nuovoSaluto;
-        vaffanculo();
-      };
-      var stampaRobo = function (robo){
-        console.log(saluto + " " + robo);
-      };
-      var stampaNome = function (nome){
-        stampaRobo(nome);
-      };
-      var stampaCognome = function (cognnome){
-        stampaRobo(cognnome);
-      };
-      return {
-        setSaluto: setSaluto,
-        stampaNome: stampaNome,
-        stampaCognome: stampaCognome
+
+      function somma(a,b){
+        var c = a+b;
+        return c;
       }
-    })();
-    </script>
 
-    <script type="text/javascript">
-    MyTeam.anangrafica.stampaNome = "Bau";
-    MyTeam.anangrafica.stampaCognome("Bau");
-      MyTeam.anangrafica.vaffanculo();
-    </script>
+      //prova funzione che ritorna niente
+      var func = function (){
+        return;
+      }
+      console.log(
+        "questo è il risultato di una funzione" +
+        "che ritorna void "+ func + "\n e il risultato: " +
+        func()
+      );
 
-    <script type="text/javascript">
-    var stampaNome = MyTeam.anangrafica.stampaNome;
-    stampaNome("Stefano");
+      //costruzione oggetto literal notation
+      var oggetto = {nome1 : "davide", nome2:"pippo"}
+      var oggetto_ereditato = {};
+      oggetto_ereditato.__proto__ = oggetto;
+      s("oggetto ereditato: "+oggetto_ereditato.nome1);
+
+      //costruzione tramite costruttore
+      var oggetto2 = new Object();
+      function Simone(saluto){
+        //nuovo oggetto vuoto o con variabili, con 'this'
+        this.saluto = saluto;
+        this.salutaTutti = function (){
+          s(this.saluto + " a tutti!");
+        }
+      }
+      var simoneBuono = new Simone("ciao");
+      var simoneCattivo = new Simone("fottetevi u_u");
+      simoneBuono.salutaTutti();
+      simoneCattivo.salutaTutti();
+
+      //esempi di reperimento valore dalle proprietà
+      //e di creazione e assegnazione di valori
+      s(oggetto["nome1"]);
+      s(oggetto.nome1);
+      s(oggetto);
+      oggetto.array = ["a","b","c"];
+      s(oggetto.array);
+      oggetto.array1 = [
+        {a:"aaaaa", b:"bbbb"},
+        "secondo elemento"
+      ];
+
+      s(oggetto.array1);
+      s(oggetto.array1[0]);
+
+      oggetto.array1.proprieta_array = "pippo";
+      s(oggetto.array1.proprieta_array);
     </script>
 
   </head>
-
     <body>
       Content of the document......
     </body>
-
-
 </html>
