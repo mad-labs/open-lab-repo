@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Title of the document</title>
+
+    <script type="text/javascript">
+    var MyTeam = MyTeam || {};
+
+
+    MyTeam.anangrafica = (function(){
+      var saluto = "Ciao";
+      var vaffanculo = function(){
+        console.log("fanculo");
+
+      }
+      var setSaluto = function(nuovoSaluto){
+        saluto = nuovoSaluto;
+        vaffanculo();
+      };
+      var stampaRobo = function (robo){
+        console.log(saluto + " " + robo);
+      };
+      var stampaNome = function (nome){
+        stampaRobo(nome);
+      };
+      var stampaCognome = function (cognnome){
+        stampaRobo(cognnome);
+      };
+      return {
+        setSaluto: setSaluto,
+        stampaNome: stampaNome,
+        stampaCognome: stampaCognome
+      }
+    })();
+    </script>
+
+    <script type="text/javascript">
+    MyTeam.anangrafica.stampaNome = "Bau";
+    MyTeam.anangrafica.stampaCognome("Bau");
+      MyTeam.anangrafica.vaffanculo();
+    </script>
+
+    <script type="text/javascript">
+    var stampaNome = MyTeam.anangrafica.stampaNome;
+    stampaNome("Stefano");
+    </script>
+
+  </head>
+
+    <body>
+      Content of the document......
+    </body>
+
+
+</html>
