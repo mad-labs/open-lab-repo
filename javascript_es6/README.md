@@ -1,3 +1,19 @@
+# Open Lab - 05
+
+## Durante questa sessione abbiamo:
+
+* guardato dei tutorial sulle nuove funzionalità di ES6:
+
+nel dettaglio abbiamo visto:
+09 - maps
+10 - sets
+11 - classes
+12 - modules - part1
+13 - modules - part2
+
+Su github troverete il codice sviluppato nel repository https://github.com/Mad-Labs/open-lab/tree/05_javascript_es6_p2
+
+
 # Open Lab - 04
 
 ## Durante questa sessione abbiamo:
