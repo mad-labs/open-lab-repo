@@ -3,16 +3,37 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      nome: "Ivan",
+      time: new Date().toString()
+    } 
+  }
+
+  changeState(e){
+    this.setState({
+      nome: e.target.value
+    })
+  }
+  
   render() {
-    let date = this.props.time;
-    let text = this.props.testo;
+    let time =  this.state.time;//this.props.time;
+    let nome = this.state.nome;//this.props.testo;
     return (
-        <div style={this.props.bg}>
-          <p>Ciao {date.toString()}</p>
-          <h1>No idea {text}</h1>
+        <div>
+          <h1>Ciao {nome}</h1>
+          <h2>sono stato creato alle {time}...</h2>
+          <Widget change={(e) => this.changeState(e)}/>
         </div>
     );
   }
 }
+
+const Widget = (props) => {
+  return (
+    <input type="text" onChange={props.change} />
+  );
+} 
 
 export default App;

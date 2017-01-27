@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 
-
-
 ReactDOM.render(
-  <App time={new Date()} testo="Questa è la data" bg={{"background": "red"}}/>,
+  <App time="pippo" testo="pluto"/>,
   document.getElementById('root')
 );
