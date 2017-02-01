@@ -1,0 +1,27 @@
+# Site settings
+title: Mad Labs
+author: Gabriele Manfredi
+email: madlabsprojects@gmail.com
+quote: IT... COULD... WOORK!!!
+description: >
+  
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.madlabs.it" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: gabonline
+github_username:  gabrox999
+google_analytics:
+show_downloads: false
+repository: mad-labs/open-lab
+
+# Build settings
+markdown: kramdown
+gems:
+#  - jekyll-feed
+#  - jekyll-mentions
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+sass:
+  sass_dir: assets/css

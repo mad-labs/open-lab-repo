@@ -1,0 +1,19 @@
+---
+layout: presentation
+---
+
+{% assign hslides = content | split: '<!-- next-slide -->' %}
+{% for hslide in hslides %}
+  <section data-background-image="{{ page.background | prepend: site.baseurl }}" >
+  {% if hslide contains '<!-- vertical-slide -->' %}
+    {% assign vslides = hslide | split: '<!-- vertical-slide -->' %}
+    {% for vslide in vslides %}
+      <section>
+        {{ vslide }}
+      </section>
+    {% endfor %}
+  {% else %}
+    {{ hslide }}
+  {% endif %}
+  </section>
+{% endfor %}
