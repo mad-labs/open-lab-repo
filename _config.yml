@@ -5,7 +5,7 @@ email: madlabsprojects@gmail.com
 quote: IT... COULD... WOORK!!!
 description: >
   
-baseurl: "/open-lab" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.madlabs.it" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: gabonline
 github_username:  gabrox999
