@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+  {% include presentation/head.html %}
+
+  <body>
+
+    <div class="reveal">
+      <div class="slides">
+        {{ content }}
+      </div>
+    </div>
+
+    <script src="{{ "/reveal.js/lib/js/head.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/reveal.js/js/reveal.js" | prepend: site.baseurl }}"></script>
+    <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: {{ page.reveal.controls }},
+        // Display a presentation progress bar
+        progress: {{ page.reveal.progress }},
+        // Display the page number of the current slide
+        slideNumber: {{ page.reveal.slideNumber }},
+        // Push each slide change to the browser history
+        history: {{ page.reveal.history }},
+        // Enable keyboard shortcuts for navigation
+        keyboard: {{ page.reveal.keyboard }},
+        // Enable the slide overview mode
+        overview: {{ page.reveal.overview }},
+        // Vertical centering of slides
+        center: {{ page.reveal.center }},
+        // Enables touch navigation on devices with touch input
+        touch: {{ page.reveal.touch }},
+        // Loop the presentation
+        loop: {{ page.reveal.loop }},
+        // Change the presentation direction to be RTL
+        rtl: {{ page.reveal.rtl }},
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: {{ page.reveal.shuffle }},
+        // Turns fragments on and off globally
+        fragments: {{ page.reveal.fragments }},
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: {{ page.reveal.embedded }},
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: {{ page.reveal.help }},
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: {{ page.reveal.showNotes }},
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: {{ page.reveal.autoSlide }},
+        // Stop auto-sliding after user input
+        autoSlideStoppable: {{ page.reveal.autoSlideStoppable }},
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: Reveal.navigateNext,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: {{ page.reveal.mouseWheel }},
+        // Hides the address bar on mobile devices
+        hideAddressBar: {{ page.reveal.hideAddressBar }},
+        // Opens links in an iframe preview overlay
+        previewLinks: {{ page.reveal.previewLinks }},
+        // Transition style
+        transition: "{{ page.reveal.transition }}", // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: "{{ page.reveal.transitionSpeed }}", // default/fast/slow
+        // Transition style for full page slide backgrounds
+        backgroundTransition: "{{ page.reveal.backgroundTransition }}", // none/fade/slide/convex/concave/zoom
+        // Number of slides away from the current that are visible
+        viewDistance: {{ page.reveal.viewDistance }},
+        // Parallax background image
+        parallaxBackgroundImage: "{{ page.reveal.parallaxBackgroundImage }}", // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+        // Parallax background size
+        parallaxBackgroundSize: "{{ page.reveal.parallaxBackgroundSize }}", // CSS syntax, e.g. "2100px 900px"
+        // Number of pixels to move the parallax background per slide
+        // - Calculated automatically unless specified
+        // - Set to 0 to disable movement along an axis
+        parallaxBackgroundHorizontal: {{ page.reveal.parallaxBackgroundHorizontal }},
+        parallaxBackgroundVertical: {{ page.reveal.parallaxBackgroundVertical }},
+
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: '{{ "/reveal.js/lib/js/classList.js" | prepend: site.baseurl }}', condition: function() { return !document.body.classList; } },
+          // Interpret Markdown in <section> elements
+          { src: '{{ "/reveal.js/plugin/markdown/marked.js" | prepend: site.baseurl }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '{{ "/reveal.js/plugin/markdown/markdown.js" | prepend: site.baseurl }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          // Syntax highlight for <code> elements
+          //{ src: '{{ "/reveal.js/plugin/highlight/highlight.js" | prepend: site.baseurl }}', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          // Zoom in and out with Alt+click
+          { src: '{{ "/reveal.js/plugin/zoom-js/zoom.js" | prepend: site.baseurl }}', async: true },
+          // Speaker notes
+          { src: '{{ "/reveal.js/plugin/notes/notes.js" | prepend: site.baseurl }}', async: true },
+          // MathJax
+          //{ src: '{{ "plugin/math/math.js" | prepend: site.baseurl }}', async: true }
+        ]
+      });
+    </script>
+
+  </body>
+</html>

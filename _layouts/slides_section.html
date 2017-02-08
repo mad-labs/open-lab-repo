@@ -1,0 +1,30 @@
+---
+layout: presentation_body
+---
+
+{% assign hslides = content | split: page.nsplit %}
+{% for hslide in hslides %}
+  <section 
+    {% if page.databackgroundcolor      %} data-background-color       ="{{page.databackgroundcolor     }}" {% endif %}
+    {% if page.databackgroundimage      %} data-background-image       ="{{page.databackgroundimage     }}" {% endif %}
+    {% if page.databackgroundsize       %} data-background-size        ="{{page.databackgroundsize      }}" {% endif %}
+    {% if page.databackgroundposition   %} data-background-position    ="{{page.databackgroundposition  }}" {% endif %}
+    {% if page.databackgroundrepeat     %} data-background-repeat      ="{{page.databackgroundrepeat    }}" {% endif %}
+    {% if page.databackgroundiframe     %} data-background-iframe      ="{{page.databackgroundiframe    }}" {% endif %}
+    {% if page.databackgroundvideo      %} data-background-video       ="{{page.databackgroundvideo     }}" {% endif %}
+    {% if page.databackgroundvideoloop  %} data-background-video-loop  {% endif %}
+    {% if page.databackgroundvideomuted %} data-background-video-muted {% endif %}
+  >
+
+  {% if hslide contains page.vsplit %}
+    {% assign vslides = hslide | split: page.vsplit %}
+    {% for vslide in vslides %}
+      <section>
+        {{ vslide }}
+      </section>
+    {% endfor %}
+  {% else %}
+    {{ hslide }}
+  {% endif %}
+  </section>
+{% endfor %}

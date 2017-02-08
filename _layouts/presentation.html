@@ -1,43 +1,14 @@
-<!doctype html>
-<html lang="en">
+---
+layout: slides_section
+---
+{% for intro in page.intros %}
+    {% capture intro_content %}{% include {{ intro }} %}{% endcapture %}
+    {{ intro_content | markdownify }}
+{% endfor %}
 
-  {% include presentation/head.html %}
+{{ content }}
 
-  <body>
-
-    <div class="reveal">
-      <div class="slides">
-        {{ content }}
-      </div>
-    </div>
-
-    <script src="{{ "/reveal.js/lib/js/head.min.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/reveal.js/js/reveal.js" | prepend: site.baseurl }}"></script>
-    <script>
-      // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-
-        {%if page.transition %}
-          transition: '{{page.transition}}',
-        {% else %}
-          transition: 'slide', // none/fade/slide/convex/concave/zoom
-        {% endif %}
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: '{{ "/reveal.js/lib/js/classList.js" | prepend: site.baseurl }}', condition: function() { return !document.body.classList; } },
-          { src: '{{ "/reveal.js/plugin/markdown/marked.js" | prepend: site.baseurl }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: '{{ "/reveal.js/plugin/markdown/markdown.js" | prepend: site.baseurl }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          //{ src: '{{ "/reveal.js/plugin/highlight/highlight.js" | prepend: site.baseurl }}', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: '{{ "/reveal.js/plugin/zoom-js/zoom.js" | prepend: site.baseurl }}', async: true },
-          { src: '{{ "/reveal.js/plugin/notes/notes.js" | prepend: site.baseurl }}', async: true }
-        ]
-      });
-    </script>
-
-  </body>
-</html>
+{% for outro in page.outros %}
+    {% capture outro_content %}{% include {{ outro }} %}{% endcapture %}
+    {{ outro_content | markdownify }}
+{% endfor %}
