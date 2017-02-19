@@ -1,0 +1,20 @@
+<!-- {{ id }} -->
+<section id="{{ id }}" class="spotlight {{ section.section-class }} {{ section.position }}">
+    <span class="image fit main bottom"><img src="{{ site.url }}{{ site.baseurl }}{{ section.pic }}" alt="" /></span>
+    <div class="content">
+        {% for info in section.infos %}
+            {% if forloop.first == true %}
+                <h2>{{ section.title }}</h2>
+                <header>
+            {% endif %}   
+            <p>{{ info }}</p>
+            {% if forloop.first == true %}
+                </header>
+            {% endif %}
+        {% endfor %}
+        <ul class="actions">
+            <li><a href="{{ site.url }}{{ site.baseurl }}{{ section.link }}" class="button">Learn More</a></li>
+        </ul>
+    </div>
+    <a href="#{{ section.next-id}}" class="goto-next scrolly">Next</a>
+</section>

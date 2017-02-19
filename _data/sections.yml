@@ -1,0 +1,51 @@
+---
+-   name: open-lab
+    id: two
+    section-class: openlab
+    position: right
+    pic: /images/pic03.jpg
+    title: Mad Labs - Open Lab
+    infos:
+        - Open Lab is a weekly meeting for developers who are interested in learning technology, sharing experiences or simple code for a couple of hours after work
+        - We meet every Wednesday from 19:00 to 22:00, kindly hosted with many other communities by <a href="http://mikamai.com"  target="_blank">Mikamai</a> and <a href="http://linkme.it/"  target="_blank">LinkMe</a>, in the <a href="http://venini42.it/" target="_blank">venini42</a> space
+    link: /open-lab
+    next-id: three
+    
+-   name: open-lab
+    id: two
+    section-class: openlab
+    position: right
+    pic: /images/pic03.jpg
+    title: Mad Labs - Open Lab
+    infos:
+        - Open Lab is a weekly meeting for developers who are interested in learning technology, sharing experiences or simple code for a couple of hours after work
+        - We meet every Wednesday from 19:00 to 22:00, kindly hosted with many other communities by <a href="http://mikamai.com"  target="_blank">Mikamai</a> and <a href="http://linkme.it/"  target="_blank">LinkMe</a>, in the <a href="http://venini42.it/" target="_blank">venini42</a> space
+    link: /open-lab
+    next-id: three
+
+-   name: web-smoothies
+    id: three
+    section-class: icebreakers
+    position: left
+    pic: /images/pic04.jpg
+    title: Mad Labs - Web Smoothies
+    infos:
+        - Web Smoothies are talks, workshops and programming session on a specific argument. Introductionary talks and coding dojo done to improve ourselfs and to network with other people
+        - We meet every 3rd Thursday of the month, from 19:00 to 22:00, kindly hosted by <a href="http://www.opendotlab.it">OpenDot</a>
+        - Here all developers and curious are welcome
+    link: /web-smoothies
+    next-id: four
+
+-   name: tech-addicts
+    id: four
+    next-id: four
+    section-class: techaddicts
+    position: right
+    pic: /images/pic07.jpg
+    title: Mad Labs - Tech Addicts
+    infos: 
+        - Blog on technology
+        - Coming soon
+    link: /tech-addicts
+    next-id: five
+---
