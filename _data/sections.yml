@@ -18,9 +18,9 @@
     pic: /images/pic04.jpg
     title: Mad Labs - Web Smoothies
     infos:
-        - Web Smoothies are talks, workshops and programming session on a specific argument. Introductionary talks and coding dojo done to improve ourselfs and to network with other people
+        - Web Smoothies are talks, workshops and programming session on a specific argument.
+        - Introductionary talks and coding dojo done to improve ourselfs and to network with other people
         - We meet every 3rd Thursday of the month, from 19:00 to 22:00, kindly hosted by <a href="http://www.opendotlab.it">OpenDot</a>
-        - Here all developers and curious are welcome
     link: /web-smoothies
     next-id: four
 
