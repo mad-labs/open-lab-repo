@@ -6,7 +6,7 @@
 
 ### What's Web Smoothies User groups?
 
-{% for info in site.data.sections[2].infos %}
+{% for info in site.data.sections[1].infos %}
   {{ info }}
 {% endfor %}
 
