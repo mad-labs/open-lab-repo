@@ -1,5 +1,7 @@
 /*! matricial_printing v0.0.0 - MIT license */
 'use strict';
+const path = require('path');
+const matricial_printing = require(path.join(__dirname, '.', './luis_matricial_printing.js'));
 
 /*
   Given an n*m matrix, print it in "spiral" order:
@@ -25,9 +27,6 @@ e.g.
   
   matricial_printing(matrix) == '1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10'
  */
-const matricial_printing = function(matrix) {
-  return '';
-};
 
 if ( typeof module !== "undefined" ) {
   module.exports = matricial_printing;

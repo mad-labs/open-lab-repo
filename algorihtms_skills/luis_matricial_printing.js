@@ -37,7 +37,7 @@ function MatrixSpiralIterator(matrix){
   };
 }
 
-const matricial_printing = function(matrix) {
+const luis_matricial_printing = function(matrix) {
   let spiral = [],
   minH = 0,
   minL = 0,
@@ -63,5 +63,5 @@ const matricial_printing = function(matrix) {
 };
 
 if ( typeof module !== "undefined" ) {
-  module.exports = matricial_printing;
+  module.exports = luis_matricial_printing;
 }
