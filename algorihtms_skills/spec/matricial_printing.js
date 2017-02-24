@@ -1,7 +1,7 @@
 var path = require('path');
 var expect = require('chai').expect;
 
-var matricial_printing = require(path.join(__dirname, '..', './matricial_printing.js'));
+var matricial_printing = require(path.join(__dirname, '..', './luis_matricial_printing.js'));
 
 describe('matricial_printing()', function () {
   'use strict';
@@ -11,7 +11,10 @@ describe('matricial_printing()', function () {
 
   });
 
-  it('does something', function () {
+  it(`solving with:
+    let matrix = [
+      [1,  2,  3]
+    ];`, function () {
     let matrix = [
       [1,  2,  3]
     ];
@@ -19,7 +22,11 @@ describe('matricial_printing()', function () {
     expect(matricial_printing(matrix)).to.equal('1,2,3');
   });
 
-  it('does something', function () {
+  it(`solving with:
+    let matrix = [
+      [1],
+      [4]
+    ];`, function () {
     let matrix = [
       [1],
       [4]
@@ -28,7 +35,11 @@ describe('matricial_printing()', function () {
     expect(matricial_printing(matrix)).to.equal('1,4');
   });
 
-  it('does something', function () {
+  it(`solving with:
+    let matrix = [
+      [1,  2,  3],
+      [4,  5,  6]
+    ];`, function () {
     let matrix = [
       [1,  2,  3],
       [4,  5,  6]
@@ -37,7 +48,12 @@ describe('matricial_printing()', function () {
     expect(matricial_printing(matrix)).to.equal('1,2,3,6,5,4');
   });
 
-  it('does something', function () {
+  it(`solving with:
+  let matrix = [
+    [1,  2,  3], // n = 3
+    [4,  5,  6],
+    [7,  8,  9]
+  ]; // m=3`, function () {
   let matrix = [
     [1,  2,  3], // n = 3
     [4,  5,  6],
@@ -46,12 +62,18 @@ describe('matricial_printing()', function () {
     expect(matricial_printing(matrix)).to.equal('1,2,3,6,9,8,7,4,5');
   });
 
-  it('does something', function () {
+  it(`solving with:
   let matrix = [
-    [1,  2,  3, 4], // n = 4
-    [5,  6,  7, 8],
-    [9, 10, 11, 12],
-    [13, 14, 15, 16]
+    [ 1,  2, 3, 4], // n = 4
+    [ 5,  6, 7, 8],
+    [ 9, 10,11,12],
+    [ 13,14,15,16]
+  ]; // m = 4`, function () {
+  let matrix = [
+    [ 1,  2, 3, 4], // n = 4
+    [ 5,  6, 7, 8],
+    [ 9, 10,11,12],
+    [ 13,14,15,16]
   ]; // m = 4
   
     expect(matricial_printing(matrix)).to.equal('1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10');

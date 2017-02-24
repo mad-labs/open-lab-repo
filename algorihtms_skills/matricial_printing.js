@@ -24,60 +24,9 @@ e.g.
   ]; // m = 4
   
   matricial_printing(matrix) == '1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10'
-  
  */
-
-function MatrixSpiralIterator(matrix){
-  this.hasNext = function (){
-    return false;
-  };
-
-  this.next = function (){
-    return -1;
-  };
-}
-
 const matricial_printing = function(matrix) {
-/*
-let n = matrix[0].length;
-let m = matrix.length;
-let result= [];
-
-console.log('matrix: ', matrix);
-console.log('initial n: ', n);
-console.log('initial m: ', m);
-console.log('initial result: ', result);
-
-let mci = new MatrixSpiralIterator(matrix);  
-
-while(mci.hasNext()){
-result.push(mci.next());
-}
-
-return result.join();
-*/
-  let spiral = [],
-  minH = 0,
-  minL = 0,
-  maxH = matrix.length - 1,
-  maxL = matrix[0].length - 1;
-
-  while (minH < maxH && minL < maxL) {
-    for (let i = minL; i <= maxL; i++) {
-      spiral.push(matrix[minH][i]);
-    }
-    for (let i = minH + 1; i <= maxH; i++) {
-      spiral.push(matrix[i][maxL]);
-    }
-    for (let i = maxL - 1; i >= minL; i--) {
-      spiral.push(matrix[maxH][i]);
-    }
-    for (let i = maxH - 1; i > minH; i--) {
-      spiral.push(matrix[i][minL]);
-    }
-    minH += 1, minL += 1, maxH -= 1, maxL -= 1;
-  }
-  return spiral.join();
+  return '';
 };
 
 if ( typeof module !== "undefined" ) {
