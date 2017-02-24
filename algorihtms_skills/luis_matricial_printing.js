@@ -27,41 +27,48 @@ e.g.
   
  */
 
-function MatrixSpiralIterator(matrix){
-  this.hasNext = function (){
-    return false;
-  };
+function MatrixSpiralIterator(matrix) {
+    this.hasNext = function() {
+        return false;
+    };
 
-  this.next = function (){
-    return -1;
-  };
+    this.next = function() {
+        return -1;
+    };
 }
 
 const luis_matricial_printing = function(matrix) {
-  let spiral = [],
-  minH = 0,
-  minL = 0,
-  maxH = matrix.length - 1,
-  maxL = matrix[0].length - 1;
+    let spiral = [],
+        min = 0,
+        maxH = matrix.length - 1,
+        maxL = maxH === -1 ? 0 : matrix[0].length - 1,
+        i;
 
-  while (minH < maxH && minL < maxL) {
-    for (let i = minL; i <= maxL; i++) {
-      spiral.push(matrix[minH][i]);
+    while (min <= maxH && min <= maxL) {
+        for (i = min; i <= maxL; i++) {
+            spiral.push(matrix[min][i]);
+        }
+
+        for (i = min + 1; i <= maxH; i++) {
+            spiral.push(matrix[i][maxL]);
+        }
+
+        for (i = maxL - 1; i >= min && maxH > min; i--) {
+            spiral.push(matrix[maxH][i]);
+        }
+
+        for (i = maxH - 1; i > min; i--) {
+            spiral.push(matrix[i][min]);
+        }
+
+        min += 1, maxH -= 1, maxL -= 1;
     }
-    for (let i = minH + 1; i <= maxH; i++) {
-      spiral.push(matrix[i][maxL]);
-    }
-    for (let i = maxL - 1; i >= minL; i--) {
-      spiral.push(matrix[maxH][i]);
-    }
-    for (let i = maxH - 1; i > minH; i--) {
-      spiral.push(matrix[i][minL]);
-    }
-    minH += 1, minL += 1, maxH -= 1, maxL -= 1;
-  }
-  return spiral.join();
+    
+    console.log('..' + spiral.toString());
+    
+    return spiral.join();
 };
 
-if ( typeof module !== "undefined" ) {
-  module.exports = luis_matricial_printing;
+if (typeof module !== "undefined") {
+    module.exports = luis_matricial_printing;
 }
