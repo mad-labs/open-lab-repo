@@ -38,24 +38,6 @@ function MatrixSpiralIterator(matrix){
 }
 
 const matricial_printing = function(matrix) {
-/*
-let n = matrix[0].length;
-let m = matrix.length;
-let result= [];
-
-console.log('matrix: ', matrix);
-console.log('initial n: ', n);
-console.log('initial m: ', m);
-console.log('initial result: ', result);
-
-let mci = new MatrixSpiralIterator(matrix);  
-
-while(mci.hasNext()){
-result.push(mci.next());
-}
-
-return result.join();
-*/
   let spiral = [],
   minH = 0,
   minL = 0,
