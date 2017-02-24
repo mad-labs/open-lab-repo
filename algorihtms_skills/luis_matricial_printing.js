@@ -57,7 +57,7 @@ const luis_matricial_printing = function(matrix) {
             spiral.push(matrix[maxH][i]);
         }
 
-        for (i = maxH - 1; i > min; i--) {
+        for (i = maxH - 1; i > min && maxL > min; i--) {
             spiral.push(matrix[i][min]);
         }
 

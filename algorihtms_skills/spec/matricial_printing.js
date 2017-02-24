@@ -13,8 +13,30 @@ describe('matricial_printing()', function () {
 
   it(`solving with:
     let matrix = [
-      [1,  2,  3]
-    ];`, function () {
+      [], // n=0
+    ]; // m=0`, function () {
+    let matrix = [
+      []
+    ];
+
+    expect(matricial_printing(matrix)).to.equal('');
+  });
+
+  it(`solving with:
+    let matrix = [
+      [1], // n=1
+    ]; // m=1`, function () {
+    let matrix = [
+      [1]
+    ];
+
+    expect(matricial_printing(matrix)).to.equal('1');
+  });
+
+  it(`solving with:
+    let matrix = [
+      [1,  2,  3], // n=3
+    ]; // m=1`, function () {
     let matrix = [
       [1,  2,  3]
     ];
@@ -24,9 +46,9 @@ describe('matricial_printing()', function () {
 
   it(`solving with:
     let matrix = [
-      [1],
+      [1], // n=1
       [4]
-    ];`, function () {
+    ]; // m=2`, function () {
     let matrix = [
       [1],
       [4]
@@ -37,9 +59,9 @@ describe('matricial_printing()', function () {
 
   it(`solving with:
     let matrix = [
-      [1,  2,  3],
+      [1,  2,  3], // n = 3
       [4,  5,  6]
-    ];`, function () {
+    ]; // m=2`, function () {
     let matrix = [
       [1,  2,  3],
       [4,  5,  6]
@@ -64,19 +86,36 @@ describe('matricial_printing()', function () {
 
   it(`solving with:
   let matrix = [
-    [ 1,  2, 3, 4], // n = 4
-    [ 5,  6, 7, 8],
-    [ 9, 10,11,12],
-    [ 13,14,15,16]
-  ]; // m = 4`, function () {
+    [ 1, 2, 3], // n = 3
+    [ 4, 5, 6],
+    [ 7, 8, 9],
+    [10,11,12],
+    [13,14,15]
+  ]; // m = 5`, function () {
   let matrix = [
-    [ 1,  2, 3, 4], // n = 4
-    [ 5,  6, 7, 8],
-    [ 9, 10,11,12],
-    [ 13,14,15,16]
-  ]; // m = 4
+    [ 1, 2, 3], // n = 3
+    [ 4, 5, 6],
+    [ 7, 8, 9],
+    [10,11,12],
+    [13,14,15]
+  ]; // m = 5
   
-    expect(matricial_printing(matrix)).to.equal('1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10');
+    expect(matricial_printing(matrix)).to.equal('1,2,3,6,9,12,15,14,13,10,7,4,5,8,11');
   });
+
+  it(`solving with:
+  let matrix = [
+    [ 1, 2, 3, 4, 5], // n = 5
+    [ 6, 7, 8, 9,10],
+    [11,12,13,14,15]
+  ]; // m=3`, function () {
+  let matrix = [
+    [ 1, 2, 3, 4, 5], // n = 5
+    [ 6, 7, 8, 9,10],
+    [11,12,13,14,15]
+  ]; // m=3
+    expect(matricial_printing(matrix)).to.equal('1,2,3,4,5,10,15,14,13,12,11,6,7,8,9');
+  });
+
 
 });
