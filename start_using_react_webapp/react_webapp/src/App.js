@@ -1,38 +1,57 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
+import ReactDOM from 'react-dom';
 import './App.css';
 import Widget from './Widget';
-import Tasto from './Tasto';
 
 
 class App extends Component {
   constructor(){
     super();
     this.state={
-      nome: "Ivan",
-      time: new Date().toString()
+      nome: "Ivan"
     } 
   }
 
-  changeState(e){
+  componentWillMount(){
+    console.log("monterà");
     this.setState({
-      nome: e.target.value
-    })
+      time: new Date().toString()
+    });
+  }
+
+  componentDidMount(){
+    console.log("montato");
+    this.incTime = setInterval(this.changeTime.bind(this), 500);
+  }
+
+  changeTime(){
+    this.setState({
+      time: new Date().toString()
+    });
+  }
+  
+  changeState(){
+    this.setState({
+      nome: this.wi.refs.cosabrutta.value
+    });
   }
   
   render() {
-    let time =  this.state.time;//this.props.time;
-    let nome = this.state.nome;//this.props.testo;
-    return (
-        <div>
-          <h1>Buonasera <Tasto nome={nome}><Heart/></Tasto></h1>
-          <h2>sono stato creato alle {time}...</h2>
-          <Widget change={(e) => this.changeState(e)}/>
-          <Widget change={(e) => this.changeState(e)}/>
-          <Widget change={(e) => this.changeState(e)}/>
-        </div>
+    console.log("renderizzato");
+   return (
+     <div>
+          <Widget ref={component => this.wi = component} change={this.changeState.bind(this)} />
+          <p>nome: {this.state.nome}</p>
+          <p>time: {this.state.time}</p>
+     </div>
     );
   }
+
+  componentWillUnmount(){
+    console.log("smonterà");
+    clearInterval(this.incTime);
+  }
+
 }
 
 
@@ -40,9 +59,26 @@ class App extends Component {
 
 
 class Heart extends React.Component{
+  mount(){
+    ReactDOM.render(<App />, document.getElementById('a'));
+  }
+
+  unmount(){
+    ReactDOM.unmountComponentAtNode(document.getElementById('a'));
+  }
   render(){
-    return <span>&hearts;</span>;
+    return (
+      <div>
+        <button onClick={this.mount.bind(this)}>
+          <span>&hearts;</span>
+        </button>
+        <button onClick={this.unmount.bind(this)}>
+          <span>&spades;</span>
+        </button>
+        <div id="a"/>
+      </div>
+    );
   }
 }
 
-export default App;
+export default Heart;

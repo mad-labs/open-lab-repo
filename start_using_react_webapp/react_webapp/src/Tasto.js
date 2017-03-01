@@ -8,11 +8,11 @@ class Tasto extends Component {
         this.kissene = this.kissene.bind(this);
     }
 
-    kissene(){
-        console.log('nomww:='  + self.nomww);
+    kissene(e){
+        console.log('e.target:='  + e.target);
         alert(':*');
     }
-
+ 
     render(){
         return (
             <button 

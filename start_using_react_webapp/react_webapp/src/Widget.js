@@ -1,11 +1,16 @@
 import React from 'react';
 
-const Widget = (props) => { 
-  return (
+
+class Widget extends React.Component{ 
+
+
+
+  render(){
+    return (
     <div> 
-        <input  type="text" onChange={props.change} /> 
+        <input ref="cosabrutta" type="text" onChange={this.props.change} /> 
     </div>
-  );
+  )};
 }; 
 
 export default Widget;
