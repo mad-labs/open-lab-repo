@@ -4,6 +4,6 @@ import App from './App';
 import './index.css';
 
 ReactDOM.render(
-  <App time="pippo" testo="pluto"/>,
+  <App/>,
   document.getElementById('root')
 );
