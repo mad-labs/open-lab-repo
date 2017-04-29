@@ -33,7 +33,7 @@ layout: default
 <!-- Five -->
 <section id="five" class="wrapper style2 fade">
     <div class="container">
-        <span class="image right"><img src="{{ site.baseurl }}/images/128px-Mad_scientist_transparent_background.svg.png" alt=""></span>
+        <span class="image right"><img src="/src/assets/images/128px-Mad_scientist_transparent_background.svg.png" alt=""></span>
         <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
         {{ post.excerpt }}
     </div>
@@ -50,7 +50,7 @@ layout: default
 <section id="content">
     <div class="wrapper style1">
         <div class="container">
-            <span class="image right"><img src="{{ site.baseurl }}/images/128px-Mad_scientist_transparent_background.svg.png" alt=""></span>
+            <span class="image right"><img src="/src/assets/images/128px-Mad_scientist_transparent_background.svg.png" alt=""></span>
             <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
             {{ post.excerpt }}
         </div>   

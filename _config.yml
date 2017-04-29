@@ -3,8 +3,7 @@ title: Mad Labs
 author: Gabriele Manfredi
 email: madlabsprojects@gmail.com
 quote: IT... COULD... WOORK!!!
-description: >
-  
+description: "MadLabs organization is a community of technologists based in Milan, that meet-up together to improve our software and web development skills with talks, coding-dojo open source project and a software laboratory" 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.madlabs.it" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: gabonline
@@ -12,16 +11,166 @@ github_username:  gabrox999
 google_analytics:
 show_downloads: false
 repository: mad-labs/open-lab
+lang: en_IT
 
-# Build settings
-markdown: kramdown
-gems:
-#  - jekyll-feed
-#  - jekyll-mentions
+social:
+  name: Mad Labs
+  links:
+    - https://twitter.com/madlabsprojects
+    - https://www.facebook.com/madlabsprojects
+    - https://madlabs-team.slack.com
+    - https://github.com/mad-labs/open-lab
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
 
+# Where things are
+source:       .
+destination:  _site
+plugins_dir:  src/_plugins
+layouts_dir:  src/_layouts
+data_dir:     src/_data
+includes_dir: src/_includes
+images:         src/images
+assets:       src/assets
 sass:
-  sass_dir: assets/css
+  sass_dir: src/assets/css
+collections:
+  posts:
+    output:   true
+
+# Handling Reading
+safe:         false
+include:      [".htaccess", "src/images/", "src/assets/"]
+exclude:      ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future:      false
+unpublished: false
+
+# Plugins
+whitelist: []
+plugins_dir:   []
+
+# Conversion
+markdown:    kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Serving
+detach:  false
+port:    4000
+host:    127.0.0.1
+baseurl: "" # does not include hostname
+show_dir_listing: false
+
+# Outputting
+permalink:     date
+paginate_path: /page:num
+timezone:      null
+
+quiet:    false
+verbose:  false
+defaults: []
+
+liquid:
+  error_mode: warn
+
+# Markdown Processors
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  auto_ids:       true
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      false
+  footnote_nr:    1
+
+gems:
+  - jekyll-seo-tag
+
+defaults:
+  -
+    scope:
+      path: 'slides'
+    values:
+      layout: presentation
+      theme: black
+      custom-theme: assets/css/custom-style.css
+      vsplit: '<!-- vertical-slide -->'
+      nsplit: '<!-- next-slide -->'
+      reveal: 
+        #Display controls in the bottom right corner
+        controls: 'true'
+        #Display a presentation progress bar
+        progress: 'true'
+        #Display the page number of the current slide
+        slideNumber: 'false'
+        #Push each slide change to the browser history
+        history: 'false'
+        #Enable keyboard shortcuts for navigation
+        keyboard: 'true'
+        #Enable the slide overview mode
+        overview: 'true'
+        #Vertical centering of slides
+        center: 'true'
+        #Enables touch navigation on devices with touch input
+        touch: 'true'
+        #Loop the presentation
+        loop: 'false'
+        #Change the presentation direction to be RTL
+        rtl: 'false'
+        #Randomizes the order of slides each time the presentation loads
+        shuffle: 'false'
+        #Turns fragments on and off globally
+        fragments: 'true'
+        #Flags if the presentation is running in an embedded mode
+        #i.e. contained within a limited portion of the screen
+        embedded: 'false'
+        #Flags if we should show a help overlay when the questionmark
+        #key is pressed
+        help: 'true'
+        #Flags if speaker notes should be visible to all viewers
+        showNotes: 'false'
+        #Number of milliseconds between automatically proceeding to the
+        #next slide disabled when set to 0 this value can be overwritten
+        #by using a data-autoslide attribute on your slides
+        autoSlide: '0'
+        #Stop auto-sliding after user input
+        autoSlideStoppable: 'true'
+        #Use this method for navigation when auto-sliding
+        autoSlideMethod: 'Reveal.navigateNext'
+        #Enable slide navigation via mouse wheel
+        mouseWheel: 'false'
+        #Hides the address bar on mobile devices
+        hideAddressBar: 'true'
+        #Opens links in an iframe preview overlay
+        previewLinks: 'false'
+        #Transition style
+        transition: 'slide' #none/fade/slide/convex/concave/zoom
+        #Transition speed
+        transitionSpeed: 'default' #default/fast/slow
+        #Transition style for full page slide backgrounds
+        backgroundTransition: 'fade' #none/fade/slide/convex/concave/zoom
+        #Number of slides away from the current that are visible
+        viewDistance: '3'
+        #Parallax background image
+        parallaxBackgroundImage: '' #https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'
+        #Parallax background size
+        parallaxBackgroundSize: '' #CSS syntax e.g. '2100px 900px'
+        #Number of pixels to move the parallax background per slide
+        #- Calculated automatically unless specified
+        #- Set to 0 to disable movement along an axis
+        parallaxBackgroundHorizontal: 'null'
+        parallaxBackgroundVertical: 'null'
