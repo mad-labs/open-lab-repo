@@ -1,52 +1,46 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+
 import './App.css';
 
 class App extends Component {
-
-  render(){
-    return(
-      <Layout>
-        <Button value="A">A</Button>
-        <Button value="B">B</Button>
-        <Button value="C">C</Button>
-      </Layout>
-    );
-  }
-}
-
-class Layout extends Component {
-
   constructor(){
     super();
     this.state = {
-      selected: "None"
+      red: 0
     }
+    this.update = this.update.bind(this);
   }
 
-  selectItem(selected){
-    this.setState({selected});
+  update(e){
+    this.setState({
+      red: ReactDOM.findDOMNode(this.refs.red.refs.inp).value
+    })
   }
 
-
-  render () {
-    let fn = child => 
-    React.cloneElement(child, {
-          onClick: this.selectItem.bind(this, child.props.value)
-        }
-      );
-
-    let items = React.Children.map(this.props.children, fn);
-
+  render(){
     return (
       <div>
-        <h2> Selected: {this.state.selected}</h2>
-        {items}
+        <p>{this.state.text}</p>
+        <Slider ref="red" update={this.update} />
+        {this.state.red}
+        <br />
       </div>
     );
   }
 }
 
-const Button = (props) => <button {...props}>{props.children}</button>;
-
+class Slider extends Component {
+  render(){
+    return (
+      <div>
+        <input ref="inp" type="range" 
+          min="0"
+          max="255"
+          onChange={this.props.update} />
+      </div>
+    );
+  }
+}
 
 export default App;
