@@ -18,7 +18,7 @@ const dispatchDecrement = () => {
   })
 };
 
-class App extends Component {
+class App1 extends Component {
   constructor(){
     super();
     this.state = {
@@ -45,4 +45,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App1;
