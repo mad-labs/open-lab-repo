@@ -18,18 +18,18 @@ const decrementCounter = (list, index) => {
 };
 
 
-export const multipleCounter = (list = [], action) => {
+export const multipleCounter = (state = [], action) => {
     switch (action.type) {
         case 'ADD_COUNTER':
-            return addCounter(list);
+            return addCounter(state);
         case 'REMOVE_COUNTER':
-            return removeCounter(list, action.index);
+            return removeCounter(state, action.index);
         case 'INCREMENT_COUNTER':
-            return incrementCounter(list, action.index);
+            return incrementCounter(state, action.index);
         case 'DECREMENT_COUNTER':
-            return decrementCounter(list, action.index);
+            return decrementCounter(state, action.index);
         default:
-            return list;
+            return state;
     }
 };
 
