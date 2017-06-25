@@ -1,6 +1,3 @@
 [submodule "src"]
 	path = src
 	url = https://github.com/mad-labs/site-layout.git
-[submodule "git-game"]
-	path = git-game
-	url = https://github.com/hgarc014/git-game.git
